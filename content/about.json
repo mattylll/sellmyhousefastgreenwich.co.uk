@@ -1,0 +1,18 @@
+{
+  "headline": "About Us",
+  "intro": "We are a trusted cash house buying company helping homeowners sell their properties quickly and fairly.",
+  "sections": [
+    {
+      "heading": "Our Story",
+      "body": "<p>Founded with a simple mission: to provide homeowners with a fast, fair, and transparent way to sell their properties. We understand that life circumstances sometimes require a quick sale, and we are here to help.</p>"
+    },
+    {
+      "heading": "Local Expertise",
+      "body": "<p>Our team has deep knowledge of the local property market, allowing us to make fair offers based on current market conditions. We pride ourselves on our understanding of the area and its unique property landscape.</p>"
+    },
+    {
+      "heading": "Our Track Record",
+      "body": "<p>We have helped hundreds of homeowners sell their properties quickly and without stress. Our process is designed to be simple, transparent, and completely free of hidden costs.</p>"
+    }
+  ]
+}

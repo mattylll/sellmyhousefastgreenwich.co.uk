@@ -1,0 +1,22 @@
+{
+  "locationIntro": "<p>Welcome to your trusted local cash house buying service. We help homeowners sell their properties quickly and hassle-free, with guaranteed cash offers and no estate agent fees.</p>",
+  "whySellFast": [
+    {
+      "heading": "Avoid Lengthy Chains",
+      "body": "Traditional property sales can take months and often fall through due to chain collapses. Our cash buying service eliminates this risk entirely."
+    },
+    {
+      "heading": "No Fees or Commissions",
+      "body": "Unlike estate agents who charge thousands in fees, we cover all costs including legal fees. The price we offer is the price you receive."
+    },
+    {
+      "heading": "Complete on Your Timeline",
+      "body": "Whether you need to sell in 7 days or 7 weeks, we work to your schedule. You choose the completion date that suits you."
+    }
+  ],
+  "marketSnapshot": [
+    { "label": "Average House Price", "value": "N/A" },
+    { "label": "Average Time to Sell", "value": "4-6 months" },
+    { "label": "Our Average Completion", "value": "14 days" }
+  ]
+}
