@@ -32,6 +32,25 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessSchema),
           }}
         />
+        {config.analytics?.ga4MeasurementId && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${config.analytics.ga4MeasurementId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${config.analytics.ga4MeasurementId}');`,
+              }}
+            />
+          </>
+        )}
+        {config.analytics?.gscVerificationCode && (
+          <meta
+            name="google-site-verification"
+            content={config.analytics.gscVerificationCode}
+          />
+        )}
       </head>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>

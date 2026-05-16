@@ -120,6 +120,11 @@ export interface LeadConfig {
   fallbackEmail: string;
 }
 
+export interface AnalyticsConfig {
+  ga4MeasurementId: string;
+  gscVerificationCode?: string;
+}
+
 export interface SiteConfig {
   location: LocationConfig;
   brand: BrandConfig;
@@ -129,6 +134,7 @@ export interface SiteConfig {
   images: ImageConfig;
   seo: SEOConfig;
   leads: LeadConfig;
+  analytics?: AnalyticsConfig;
 }
 
 // Re-export the site config

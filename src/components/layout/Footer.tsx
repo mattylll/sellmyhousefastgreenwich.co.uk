@@ -4,6 +4,14 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { getSiteConfig } from '@/lib/config';
 import { formatPhoneForTel, slugify } from '@/lib/utils';
+import type { NetworkConfig } from '@/lib/content';
+
+let networkData: NetworkConfig | null = null;
+try {
+  networkData = require('../../../network.json') as NetworkConfig;
+} catch {
+  networkData = null;
+}
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -18,6 +26,29 @@ const legalLinks = [
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms & Conditions' },
 ];
+
+function FooterNearbyLinks() {
+  if (!networkData) return null;
+
+  const links = [...networkData.nearbyLocations.slice(0, 4), ...networkData.regionalLocations.slice(0, 2)];
+  if (links.length === 0) return null;
+
+  return (
+    <ul className="space-y-3">
+      {links.map((link) => (
+        <li key={link.domain}>
+          <a
+            href={`https://www.${link.domain}`}
+            rel="noopener"
+            className="text-sm text-[var(--color-muted-foreground)] hover:text-[var(--color-accent)] hover:translate-x-1 inline-block transition-all duration-200"
+          >
+            {link.anchor}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Footer() {
   const config = getSiteConfig();
@@ -105,23 +136,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Nearby Locations */}
           <div>
             <h3 className="text-sm font-bold text-[var(--color-foreground)] uppercase tracking-wider mb-5">
-              Legal
+              Nearby Locations
             </h3>
-            <ul className="space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[var(--color-muted-foreground)] hover:text-[var(--color-accent)] hover:translate-x-1 inline-block transition-all duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <FooterNearbyLinks />
           </div>
         </div>
 

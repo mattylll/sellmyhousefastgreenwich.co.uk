@@ -1,0 +1,55 @@
+{
+  "nearbyLocations": [
+    {
+      "name": "Tower Hamlets",
+      "domain": "sellmyhousefasttowerhamlets.co.uk",
+      "region": "London",
+      "anchor": "Cash House Buyers Tower Hamlets",
+      "distance": "nearby"
+    },
+    {
+      "name": "Lewisham",
+      "domain": "sellmyhousefastlewisham.co.uk",
+      "region": "London",
+      "anchor": "Lewisham House Buyers",
+      "distance": "nearby"
+    },
+    {
+      "name": "Newham",
+      "domain": "sellmyhousefastnewham.co.uk",
+      "region": "London",
+      "anchor": "Quick House Sale Newham",
+      "distance": "nearby"
+    },
+    {
+      "name": "Southwark",
+      "domain": "sellmyhousefastsouthwark.co.uk",
+      "region": "London",
+      "anchor": "Sell House Fast Southwark",
+      "distance": "nearby"
+    },
+    {
+      "name": "Barking",
+      "domain": "sellmyhousefastbarking.co.uk",
+      "region": "London",
+      "anchor": "We Buy Houses Barking",
+      "distance": "nearby"
+    }
+  ],
+  "regionalLocations": [
+    {
+      "name": "Chelmsford",
+      "domain": "sellmyhousefastchelmsford.co.uk",
+      "region": "East Anglia",
+      "anchor": "Fast Property Sale Chelmsford",
+      "distance": "regional"
+    },
+    {
+      "name": "St Albans",
+      "domain": "sellmyhousefaststalbans.co.uk",
+      "region": "South East",
+      "anchor": "Sell Your House Fast St Albans",
+      "distance": "regional"
+    }
+  ]
+}

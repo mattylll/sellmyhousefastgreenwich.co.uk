@@ -3,6 +3,21 @@ import path from 'path';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
+// Network linking interfaces
+
+export interface NetworkLink {
+  name: string;
+  domain: string;
+  region: string;
+  anchor: string;
+  distance: 'nearby' | 'regional';
+}
+
+export interface NetworkConfig {
+  nearbyLocations: NetworkLink[];
+  regionalLocations: NetworkLink[];
+}
+
 // Content file interfaces
 
 export interface HomepageContent {
@@ -117,4 +132,65 @@ export function getFAQContent(): FAQContent {
 
 export function getContactContent(): ContactContent {
   return readJsonFile<ContactContent>('contact.json');
+}
+
+// HM Land Registry Price Paid Data, prepared by _orchestrator/land-registry/ingest-ppd.ts
+
+export interface SoldDataBreakdownEntry {
+  count: number;
+  averagePrice: number;
+  medianPrice: number;
+}
+
+export interface SoldDataMonthly {
+  month: string; // YYYY-MM
+  count: number;
+  averagePrice: number;
+  medianPrice: number;
+}
+
+export interface SoldDataRecentSale {
+  date: string;
+  price: number;
+  type: string;
+  tenure: string;
+  newBuild: boolean;
+  street: string;
+  outwardCode: string;
+}
+
+export interface SoldData {
+  lastUpdated: string;
+  source: string;
+  sourceUrl: string;
+  license: string;
+  sourceFiles: string[];
+  dateRange: { from: string | null; to: string | null };
+  filters: { districts: string[]; townCity: string[] | null; postcodes: string[] | null };
+  count: number;
+  averagePrice: number;
+  medianPrice: number;
+  minPrice: number;
+  maxPrice: number;
+  byPropertyType: Record<string, SoldDataBreakdownEntry>;
+  byMonth: SoldDataMonthly[];
+  recentSales: SoldDataRecentSale[];
+}
+
+export function getSoldData(): SoldData | null {
+  try {
+    return readJsonFile<SoldData>('sold-data.json');
+  } catch {
+    return null;
+  }
+}
+
+export function getNetworkConfig(): NetworkConfig | null {
+  try {
+    const networkPath = path.join(process.cwd(), 'network.json');
+    const raw = fs.readFileSync(networkPath, 'utf-8');
+    return JSON.parse(raw) as NetworkConfig;
+  } catch {
+    return null;
+  }
 }

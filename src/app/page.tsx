@@ -15,6 +15,8 @@ import AreaGrid from '@/components/sections/AreaGrid';
 import FAQAccordion from '@/components/sections/FAQAccordion';
 import StatsCounter from '@/components/sections/StatsCounter';
 import CTASection from '@/components/sections/CTASection';
+import NearbyLocations from '@/components/sections/NearbyLocations';
+import SoldPrices from '@/components/sections/SoldPrices';
 
 export const metadata: Metadata = generatePageMeta({});
 
@@ -27,6 +29,7 @@ const sectionComponents: Record<string, React.ComponentType<any>> = {
   areas: AreaGrid,
   faq: FAQAccordion,
   cta: CTASection,
+  'nearby-locations': NearbyLocations,
 };
 
 export default function HomePage() {
@@ -190,7 +193,15 @@ export default function HomePage() {
             props.faqs = topFaqs;
           }
 
-          return <Component key={sectionKey} {...props} />;
+          const rendered = <Component key={sectionKey} {...props} />;
+
+          // Inject sold-prices section immediately after the stats block.
+          // SoldPrices renders null when sold-data.json is missing or empty,
+          // so this is safe on sites that haven't been ingested yet.
+          if (sectionKey === 'stats') {
+            return [rendered, <SoldPrices key="sold-prices" />];
+          }
+          return rendered;
         })}
     </>
   );

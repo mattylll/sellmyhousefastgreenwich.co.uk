@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getSiteConfig } from '@/lib/config';
-import { getAreaContent } from '@/lib/content';
+import { getAreaContent, getNetworkConfig } from '@/lib/content';
 import { generatePageMeta, generateBreadcrumbSchema } from '@/lib/seo';
 import ValuationForm from '@/components/forms/ValuationForm';
 import CTASection from '@/components/sections/CTASection';
@@ -238,7 +238,40 @@ export default async function AreaPage({ params }: AreaPageProps) {
         </div>
       </section>
 
+      {/* Cross-site nearby locations */}
+      <AreaNearbyLocations />
+
       <CTASection />
     </>
+  );
+}
+
+function AreaNearbyLocations() {
+  const network = getNetworkConfig();
+  if (!network) return null;
+
+  const links = network.nearbyLocations.slice(0, 4);
+  if (links.length === 0) return null;
+
+  return (
+    <section className="py-12 bg-[var(--color-muted)]">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-xl font-bold text-[var(--color-foreground)] mb-5">
+          Sell Your House in Other Locations
+        </h2>
+        <div className="flex flex-wrap justify-center gap-3">
+          {links.map((link) => (
+            <a
+              key={link.domain}
+              href={`https://www.${link.domain}`}
+              rel="noopener"
+              className="px-4 py-2 bg-[var(--color-card)] text-[var(--color-foreground)] rounded-[var(--border-radius)] hover:bg-[var(--color-secondary)] hover:text-[var(--color-background)] transition-colors"
+            >
+              {link.anchor}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

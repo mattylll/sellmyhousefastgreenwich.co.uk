@@ -1,0 +1,436 @@
+{
+  "lastUpdated": "2026-05-16",
+  "source": "HM Land Registry Price Paid Data",
+  "sourceUrl": "https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads",
+  "license": "Open Government Licence v3.0 — Contains HM Land Registry data © Crown copyright and database right",
+  "sourceFiles": [
+    "pp-2024.csv",
+    "pp-2025.csv",
+    "pp-2026.csv"
+  ],
+  "dateRange": {
+    "from": "2024-01-02",
+    "to": "2026-03-23"
+  },
+  "filters": {
+    "districts": [
+      "GREENWICH"
+    ],
+    "townCity": null,
+    "postcodes": null
+  },
+  "count": 6885,
+  "averagePrice": 550951,
+  "medianPrice": 450000,
+  "minPrice": 100,
+  "maxPrice": 34395912,
+  "byPropertyType": {
+    "Detached": {
+      "count": 149,
+      "averagePrice": 993098,
+      "medianPrice": 740000
+    },
+    "Semi-Detached": {
+      "count": 758,
+      "averagePrice": 637498,
+      "medianPrice": 565000
+    },
+    "Terraced": {
+      "count": 2180,
+      "averagePrice": 561255,
+      "medianPrice": 477500
+    },
+    "Flat": {
+      "count": 3544,
+      "averagePrice": 418109,
+      "medianPrice": 405000
+    },
+    "Other": {
+      "count": 254,
+      "averagePrice": 1798382,
+      "medianPrice": 427500
+    }
+  },
+  "byMonth": [
+    {
+      "month": "2024-01",
+      "count": 201,
+      "averagePrice": 536194,
+      "medianPrice": 435000
+    },
+    {
+      "month": "2024-02",
+      "count": 226,
+      "averagePrice": 562603,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2024-03",
+      "count": 409,
+      "averagePrice": 516636,
+      "medianPrice": 495000
+    },
+    {
+      "month": "2024-04",
+      "count": 218,
+      "averagePrice": 500693,
+      "medianPrice": 412500
+    },
+    {
+      "month": "2024-05",
+      "count": 327,
+      "averagePrice": 561760,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2024-06",
+      "count": 219,
+      "averagePrice": 721025,
+      "medianPrice": 445000
+    },
+    {
+      "month": "2024-07",
+      "count": 288,
+      "averagePrice": 518150,
+      "medianPrice": 460000
+    },
+    {
+      "month": "2024-08",
+      "count": 344,
+      "averagePrice": 751891,
+      "medianPrice": 472000
+    },
+    {
+      "month": "2024-09",
+      "count": 324,
+      "averagePrice": 620732,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2024-10",
+      "count": 339,
+      "averagePrice": 546421,
+      "medianPrice": 442000
+    },
+    {
+      "month": "2024-11",
+      "count": 394,
+      "averagePrice": 481278,
+      "medianPrice": 427750
+    },
+    {
+      "month": "2024-12",
+      "count": 294,
+      "averagePrice": 518579,
+      "medianPrice": 427498
+    },
+    {
+      "month": "2025-01",
+      "count": 290,
+      "averagePrice": 494220,
+      "medianPrice": 446500
+    },
+    {
+      "month": "2025-02",
+      "count": 287,
+      "averagePrice": 529402,
+      "medianPrice": 460000
+    },
+    {
+      "month": "2025-03",
+      "count": 683,
+      "averagePrice": 508554,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2025-04",
+      "count": 113,
+      "averagePrice": 866051,
+      "medianPrice": 400000
+    },
+    {
+      "month": "2025-05",
+      "count": 168,
+      "averagePrice": 566281,
+      "medianPrice": 452500
+    },
+    {
+      "month": "2025-06",
+      "count": 225,
+      "averagePrice": 550132,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2025-07",
+      "count": 243,
+      "averagePrice": 513834,
+      "medianPrice": 447000
+    },
+    {
+      "month": "2025-08",
+      "count": 202,
+      "averagePrice": 482345,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2025-09",
+      "count": 216,
+      "averagePrice": 490532,
+      "medianPrice": 445000
+    },
+    {
+      "month": "2025-10",
+      "count": 205,
+      "averagePrice": 491964,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2025-11",
+      "count": 153,
+      "averagePrice": 455302,
+      "medianPrice": 425000
+    },
+    {
+      "month": "2025-12",
+      "count": 173,
+      "averagePrice": 725382,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2026-01",
+      "count": 143,
+      "averagePrice": 542407,
+      "medianPrice": 450000
+    },
+    {
+      "month": "2026-02",
+      "count": 143,
+      "averagePrice": 473350,
+      "medianPrice": 435000
+    },
+    {
+      "month": "2026-03",
+      "count": 58,
+      "averagePrice": 536367,
+      "medianPrice": 457500
+    }
+  ],
+  "recentSales": [
+    {
+      "date": "2026-03-23",
+      "price": 395000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Blackheath Hill",
+      "outwardCode": "SE10"
+    },
+    {
+      "date": "2026-03-20",
+      "price": 620000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Furzefield Road",
+      "outwardCode": "SE3"
+    },
+    {
+      "date": "2026-03-20",
+      "price": 310000,
+      "type": "Semi-Detached",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Sidewood Road",
+      "outwardCode": "SE9"
+    },
+    {
+      "date": "2026-03-20",
+      "price": 685000,
+      "type": "Semi-Detached",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Domonic Drive",
+      "outwardCode": "SE9"
+    },
+    {
+      "date": "2026-03-19",
+      "price": 400000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Welland Street",
+      "outwardCode": "SE10"
+    },
+    {
+      "date": "2026-03-19",
+      "price": 350000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Peabody Close",
+      "outwardCode": "SE10"
+    },
+    {
+      "date": "2026-03-19",
+      "price": 330000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Erebus Drive",
+      "outwardCode": "SE28"
+    },
+    {
+      "date": "2026-03-17",
+      "price": 108000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Defence Close",
+      "outwardCode": "SE28"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 370000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Reidhaven Road",
+      "outwardCode": "SE18"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 199200,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Wellington Street",
+      "outwardCode": "SE18"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 535000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Isla Road",
+      "outwardCode": "SE18"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 575000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Greening Street",
+      "outwardCode": "SE2"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 472000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Howarth Road",
+      "outwardCode": "SE2"
+    },
+    {
+      "date": "2026-03-16",
+      "price": 615000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Nithdale Road",
+      "outwardCode": "SE18"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 307000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Argyll Road",
+      "outwardCode": "SE18"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 371000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Booth Close",
+      "outwardCode": "SE28"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 320000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Anderson Road",
+      "outwardCode": "SE3"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 685000,
+      "type": "Detached",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Little Heath",
+      "outwardCode": "SE7"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 620000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Cavalier Terrace",
+      "outwardCode": "SE7"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 425000,
+      "type": "Flat",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Greenacres",
+      "outwardCode": "SE9"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 1210000,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Ashburnham Grove",
+      "outwardCode": "SE10"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 960000,
+      "type": "Detached",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Mottingham Lane",
+      "outwardCode": "SE12"
+    },
+    {
+      "date": "2026-03-13",
+      "price": 525000,
+      "type": "Terraced",
+      "tenure": "Leasehold",
+      "newBuild": false,
+      "street": "Messeter Place",
+      "outwardCode": "SE9"
+    },
+    {
+      "date": "2026-03-12",
+      "price": 711240,
+      "type": "Terraced",
+      "tenure": "Freehold",
+      "newBuild": false,
+      "street": "Craigerne Road",
+      "outwardCode": "SE3"
+    }
+  ]
+}

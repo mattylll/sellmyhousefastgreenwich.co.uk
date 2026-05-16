@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getSiteConfig } from '@/lib/config';
-import { getAllBlogPosts } from '@/lib/content';
+import { getAllBlogPosts, getSoldData } from '@/lib/content';
 
 export const dynamic = 'force-static';
 
@@ -52,6 +52,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+
+  const sold = getSoldData();
+  if (sold && sold.count > 0) {
+    staticPages.push({
+      url: baseUrl + '/sold-prices',
+      lastModified: sold.lastUpdated ? new Date(sold.lastUpdated) : new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    });
+  }
 
   const areaPages: MetadataRoute.Sitemap = config.content.areaSlugs.map(
     (slug) => ({

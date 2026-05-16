@@ -1,25 +1,6 @@
 {
-  "framework": "nextjs",
-  "regions": [
-    "lhr1"
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    }
-  ]
+  "framework": null,
+  "buildCommand": "npx next build",
+  "outputDirectory": "out",
+  "installCommand": "npm install"
 }
